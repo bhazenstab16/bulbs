@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>Creating and Changing Content</title>
+    <link rel="stylesheet" href="../style.css" />
+    <script src="jquery-3.0.0.js"></script>
+	<!--<script type="text/javascript">
+		
+		function turnOn()
+		{
+			$("#bulb").attr("src", "bulbon.gif");
+			$("#switch").html("Off");
+			$("#switch").attr("onClick", "turnOff()");
+		}
+		function turnOff()
+		{
+			$("#bulb").attr("src", "bulboff.gif");
+			$("#switch").html("On");
+			$("#switch").attr("onClick", "turnOn()");
+		}
+	</script>
+	-->
+	
+	<script type="text/javascript">
+		function turnOn()
+		{
+			$("#bulb").attr("src", "bulbon.gif"); 
+			$("#switch").html("Off");
+			$("#switch").attr("onClick", "turnOff()");
+		}
+		function turnOff()
+		{
+			$("#bulb").attr("src", "bulboff.gif");
+			$("#switch").html("On");
+			$("#switch").attr("onClick", "turnOn()");
+		}
+		
+		var isOn = true;
+		
+		if(isOn)
+		{
+			turnOff(); isOn = false;
+		}
+		else if(!isOn)
+		{
+			turnOn(); isOn = true;
+		}
+		else
+		{
+			console.log("Issue in if statement");
+		}
+	</script>
+	
+</head>
+
+<body>
+	<img id="bulb" src="./bulboff.gif">
+	<br>
+	<button type="button" id="switch" onclick="turnOn()">On</button>
+	
+</body>
+
+</html>
